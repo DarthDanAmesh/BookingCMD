@@ -1,0 +1,116 @@
+/* Define a CSS custom property for primary color */
+:root {
+    --main-background-primary-color: #ffffff;
+    --main-button-background-primary-color: #2b56a5;
+    --main-button-background-secondary-color: #43a52b;
+    --main-primary-font-size: 16px;
+    --main-primary-text-color-one: #ffffff;
+    --main-primary-text-color-two: rgb(0, 0, 0);
+  }
+
+  /* Define a CSS custom property for secondary color */
+  :root {
+    --main-button-secondary-color: #39cf84;
+    --main-background-secondary-color: #c3d7e7;
+    --main-hover-primary-color:#679fce;
+    --main-secondary-font-size: 18px;
+  }
+
+  /* Define a CSS custom property for font family */
+  :root {
+    --main-font-family: 'Arial', sans-serif;
+  }
+
+  /* Navigation Styles */
+  .navigation {
+    display: flex;
+    align-items: center;
+    background-color: var(--main-background-primary-color);
+    color: var(--main-primary-text-color-one);
+    font-family: var(--main-font-family);
+    padding-left: 30%;
+  }
+
+  .logo {
+    margin-right: 20px;
+    color: #000000;
+    flex-grow: 0.5; /* Add space between logo and ul items */
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 20px; /* Add 20px gap between li items */
+  }
+
+  /* Individual LI styles */
+  li {
+    margin-right: 10px; /* Add space between the li items */
+  }
+
+  .hero-section {
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    height: 40vh; /* Adjust the height as needed */
+    background-color: var(--main-background-secondary-color);
+  }
+
+  /* Styles for the content within the hero section */
+  .container {
+    text-align: center;
+  }
+
+  .container h3 {
+    font-size: 24px;
+  }
+
+  /* Button Styles */
+  .button {
+    background-color: var(--main-button-background-primary-color);
+    color: var(--main-primary-text-color-one);
+    font-family: var(--main-font-family);
+    padding: 8px 16px;
+    font-size: var(--main-primary-font-size);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* Input Styles */
+  .input {
+    border: 1px solid var(--main-background-secondary-color);
+    padding: 9px;
+    font-family: var(--main-font-family);
+  }
+
+  main {
+    display: flex;
+    justify-content: center; /* Adjust the height as needed */
+    align-items: center; /* Center content horizontally */
+    height: 20vh;  /* Adjust the height as needed */
+  }
+
+  /* Footer Styles */
+  .footer {
+    background-color: var(--main-background-primary-color);
+    color: var(--main-primary-text-color-two);
+    font-family: var(--main-font-family);
+    font-size: var(--main-primary-font-size);
+    text-align: center;
+    height: 25vh;
+  }
+
+  a{
+    color:#000000;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    
+  }
+
+  a:hover{
+    color:var(--main-hover-primary-color);
+  }

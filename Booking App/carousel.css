@@ -1,0 +1,11 @@
+.custom-size {
+    width: 800px;
+    height: 250px;
+    object-fit: contain; /* This ensures the aspect ration is maintained, and the image fits in the specified 800 by 200 px. covers the entire area without distortion */
+}
+
+.custom-size-hero {
+    width: 800px;
+    height: 350px;
+    object-fit: cover; /* This crops the image, and then fits it to the specified 800 by 200 px.*/
+}

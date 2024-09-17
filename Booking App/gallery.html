@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" /> 
+  <link href="carousel.css" rel="stylesheet" type="text/css"/>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!--In React, you have to use className, instead of class: credit https://www.tailwindtap.com/components/gallery/view/gallery-image-gallery.-->
+    <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-24 flex items-center">
+        <div class="-m-1 flex flex-row sm:flex-wrap md:-m-2">
+          <div class="flex w-full sm:w-1/2 flex-wrap lg:flex-row flex-row-reverse">
+            <div class="w-full lg:w-1/2 p-1 md:p-2">
+              <img
+                alt="gallery"
+                class="block h-full w-full rounded-lg 2xl:rounded-2xl object-cover object-center"
+                src="https://www.tailwindtap.com/assets/components/gallery/image1.jpg"
+              />
+            </div>
+            <div class="w-full lg:w-1/2 p-1 md:p-2">
+              <img
+                alt="gallery"
+                class="block h-full w-full rounded-lg 2xl:rounded-2xl object-cover object-center"
+                src="https://www.tailwindtap.com/assets/components/gallery/image2.jpg"
+              />
+            </div>
+            <div class="w-full p-1 md:p-2">
+              <img
+                alt="gallery"
+                class="block h-full w-full rounded-lg 2xl:rounded-2xl object-cover object-center max-h-none lg:max-h-[1000px]"
+                src="https://www.tailwindtap.com/assets/components/gallery/image7.jpg"
+              />
+            </div>
+          </div>
+          <div class="flex w-full sm:w-1/2 flex-wrap">
+            <div class="w-full p-1 md:p-2">
+              <img
+                alt="gallery"
+                class="block h-full w-full rounded-lg 2xl:rounded-2xl object-cover object-center"
+                src="https://www.tailwindtap.com/assets/components/gallery/image9.jpg"
+              />
+            </div>
+            <div class="w-1/2 p-1 md:p-2">
+              <img
+                alt="gallery"
+                class="block h-full w-full rounded-lg 2xl:rounded-2xl object-cover object-center"
+                src="https://www.tailwindtap.com/assets/components/gallery/image4.jpg"
+              />
+            </div>
+            <div class="w-1/2 p-1 md:p-2">
+              <img
+                alt="gallery"
+                class="block h-full w-full rounded-lg 2xl:rounded-2xl object-cover object-center"
+                src="https://www.tailwindtap.com/assets/components/gallery/image6.jpg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
