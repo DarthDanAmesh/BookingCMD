@@ -4,9 +4,9 @@ This app is a lightweight cmd based application for Booking,RecordKeeping
 
 # Screenshots: 
 
-![alt text](first.png)
-![alt text](second.png)
-![alt text](third.png)
-![alt text](fourth.png)
-![alt text](sixth.png)
-![alt text](fifth.png)
+![alt text](bookn\first.png)
+![alt text](bookn\second.png)
+![alt text](bookn\third.png)
+![alt text](bookn\fourth.png)
+![alt text](bookn\sixth.png)
+![alt text](bookn\fifth.png)
