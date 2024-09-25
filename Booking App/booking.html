@@ -28,6 +28,7 @@
             <div class="text-center lg:text-center">
                 <h1 class="text-5xl font-bold">Confirm Booking Details!</h1>
             </div>
+            <!--email-->
             <div class="card bg-base-300 w-full max-w-sm shrink-0 shadow-2xl">
                 <form class="card-body">
                     <div class="form-control">
@@ -44,35 +45,51 @@
                             </svg>
                         <span class="label-text">Email</span>
                         </label>
-                        <input type="email" placeholder="Email" class="input input-bordered" />
+                        <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email" class="input input-bordered" />
                     </div>
-
+                    <!--Full name-->
                     <div class="form-control">
                         <label class="label">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4 opacity-70"> 
                             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" /> </svg>
                         <span class="label-text">Name</span>
                         </label>
-                        <input type="text" placeholder="Full Name" class="input input-bordered" required />
+                        <input type="text" placeholder="Full Name" pattern="\w{3,50}/" class="input input-bordered" required >
                     </div>
+
+                  <!--phone-->
                 <div class="form-control">
                     <label class="label" fill="currentColor" class="h-4 w-4 opacity-70">&#x260E;
                         <span class="label-text">Phone Number</span>
                     </label>
-                    <input type="tel" placeholder="0712345678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" class="input input-bordered" required />
+                    <input type="tel" placeholder="0712345678" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="input input-bordered" required />
                 </div>
+                <!--booking date-->
                 <div class="form-control">
                     <label class="label">
                     <span class="label-text">Booking Date</span>
-                    </label>
-                    <input type="date" placeholder="dd-mm-yyy" class="input input-bordered" required />
+                    </label><!--script tag below-->
+                    <input type="datetime-local" id="bookingDate" value="2017-06-01T20:30" class="input input-bordered" required />
                 </div>
+                <!--duration of stays-->
                 <div class="form-control">
-                    <label class="label">
+                  <!-- check here: the label id is indicated as 'for="days"' so we are trying to asociate it with id called days (id="days") in our input for duration of stays-->
+                    <label for="days" class="label">
                     <span class="label-text">Duration Stays</span>
                     </label>
-                    <input type="number" placeholder="3" class="input input-bordered" required />
+                    <!--input has id="days" associated with label above. This helps to programmatically use it with javascript, see in the script tag below-->
+                    <input id="days" type="number" placeholder="3" class="input input-bordered" min="1" oninput="calculatePrice()" required />
+
+                    <!--this div has the id=result for the price change feature: -->
+                    <div class="stats stats-vertical shadow">
+                      <div class="stat">
+                        <div class="stat-title"></div>
+                        <div class="stat-value" id="result"></div>
+                        <div class="stat-desc"><small>VAT inclusive</small></div>
+                      </div>
+                    </div>
                 </div>
+                <!--checkbox, terms and conditions-->
                 <div class="flex items-center gap-1.5  justify-start pl-2">
                     <div class="form-control">
                       <label class="label cursor-pointer">
@@ -100,4 +117,20 @@
         </div>
   </div>
 </body>
+<script>
+  // Set the minimum date and time to the current date and time
+  const bookingDateInput = document.getElementById('bookingDate');
+  const now = new Date().toISOString().slice(0, 16); // Get current date and time in the format YYYY-MM-DDTHH:MM
+  bookingDateInput.min = now;
+
+  // handle the pricing
+
+  function calculatePrice() {
+    const pricePerDay = 5000; // price per day,
+    const days = document.getElementById('days').value; // this is the programmatic side of the <label for="{days as an example}" in our form above>
+    const totalPrice = days * pricePerDay;
+    document.getElementById('result').innerText = `Total: $${totalPrice}`;
+}
+
+</script>
 </html>
