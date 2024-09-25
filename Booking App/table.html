@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link href="carousel.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!--credit: https://daisyui.com/components/table/-->
+
+    <div class="navbar bg-base-300">
+        <div class="navbar-start">
+          <a class="btn btn-ghost text-xl">Chula Beach Resort<small>Rusinga</small></a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a href="location.html">Location</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <details class="dropdown">
+            <summary class="btn m-1">Login/Register</summary>
+            <ul class="menu dropdown-content bg-base-80 rounded-box z-[1] w-52 p-2 shadow">
+              <li><a class="btn" href="login.html">Login</a></li>
+              <li><a class="btn" href="signup.html">Register</a></li>
+            </ul>
+          </details>
+          
+        </div>
+    </div>
+    <div class="md:w-96 mx-auto text-center my-24">
+        <div class="text-2xl font-bold">Dedicated Team</div>
+        <div class="text-xl">
+          Meet our dedicated team of staff!
+        </div>
+      </div>
+    <div class="overflow-x-auto">
+        <table class="table">
+          <!-- head -->
+          <thead>
+            <tr>
+              <th>
+                <label>
+                  <input type="checkbox" class="checkbox" />
+                </label>
+              </th>
+              <th>Name</th>
+              <th>Job</th>
+              <th>Favorite Color</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- row 1 -->
+            <tr>
+              <th>
+                <label>
+                  <input type="checkbox" class="checkbox" />
+                </label>
+              </th>
+              <td>
+                <div class="flex items-center gap-3">
+                  <div class="avatar">
+                    <div class="mask mask-squircle h-12 w-12">
+                      <img
+                        src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                        alt="Avatar Tailwind CSS Component" />
+                    </div>
+                  </div>
+                  <div>
+                    <div class="font-bold">Hart Hagerty</div>
+                    <div class="text-sm opacity-50">United States</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                Zemlak, Daniel and Leannon
+                <br />
+                <span class="badge badge-ghost badge-sm">Desktop Support Technician</span>
+              </td>
+              <td>Purple</td>
+              <th>
+                <button class="btn btn-ghost btn-xs">details</button>
+              </th>
+            </tr>
+            <!-- row 2 -->
+            <tr>
+              <th>
+                <label>
+                  <input type="checkbox" class="checkbox" />
+                </label>
+              </th>
+              <td>
+                <div class="flex items-center gap-3">
+                  <div class="avatar">
+                    <div class="mask mask-squircle h-12 w-12">
+                      <img
+                        src="https://img.daisyui.com/images/profile/demo/3@94.webp"
+                        alt="Avatar Tailwind CSS Component" />
+                    </div>
+                  </div>
+                  <div>
+                    <div class="font-bold">Brice Swyre</div>
+                    <div class="text-sm opacity-50">China</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                Carroll Group
+                <br />
+                <span class="badge badge-ghost badge-sm">Tax Accountant</span>
+              </td>
+              <td>Red</td>
+              <th>
+                <button class="btn btn-ghost btn-xs">details</button>
+              </th>
+            </tr>
+            <!-- row 3 -->
+            <tr>
+              <th>
+                <label>
+                  <input type="checkbox" class="checkbox" />
+                </label>
+              </th>
+              <td>
+                <div class="flex items-center gap-3">
+                  <div class="avatar">
+                    <div class="mask mask-squircle h-12 w-12">
+                      <img
+                        src="https://img.daisyui.com/images/profile/demo/4@94.webp"
+                        alt="Avatar Tailwind CSS Component" />
+                    </div>
+                  </div>
+                  <div>
+                    <div class="font-bold">Marjy Ferencz</div>
+                    <div class="text-sm opacity-50">Russia</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                Rowe-Schoen
+                <br />
+                <span class="badge badge-ghost badge-sm">Office Assistant I</span>
+              </td>
+              <td>Crimson</td>
+              <th>
+                <button class="btn btn-ghost btn-xs">details</button>
+              </th>
+            </tr>
+            <!-- row 4 -->
+            <tr>
+              <th>
+                <label>
+                  <input type="checkbox" class="checkbox" />
+                </label>
+              </th>
+              <td>
+                <div class="flex items-center gap-3">
+                  <div class="avatar">
+                    <div class="mask mask-squircle h-12 w-12">
+                      <img
+                        src="https://img.daisyui.com/images/profile/demo/5@94.webp"
+                        alt="Avatar Tailwind CSS Component" />
+                    </div>
+                  </div>
+                  <div>
+                    <div class="font-bold">Yancy Tear</div>
+                    <div class="text-sm opacity-50">Brazil</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                Wyman-Ledner
+                <br />
+                <span class="badge badge-ghost badge-sm">Community Outreach Specialist</span>
+              </td>
+              <td>Indigo</td>
+              <th>
+                <button class="btn btn-ghost btn-xs">details</button>
+              </th>
+            </tr>
+          </tbody>
+          <!-- foot -->
+          <tfoot>
+            <tr>
+              <th></th>
+              <th>Name</th>
+              <th>Job</th>
+              <th>Favorite Color</th>
+              <th></th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+</body>
+
+</html>
