@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" /> 
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" hreflang="en" rel="stylesheet" type="text/css" /> 
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
@@ -43,13 +43,14 @@
                   <div class="flex gap-3">
                     <input
                       type="text"
-                      placeholder="Name"
-                      class="input input-bordered input-primary w-full max-w-xs"
+                      placeholder="Name" autocapitalize="words"
+                      class="input input-bordered input-primary w-full max-w-xs" required
                     />
+                    <!--consider using text in contact instead of type="tel", for brevity-->
                     <input
-                      type="tel"
-                      placeholder="Contact"
-                      class="input input-bordered input-warning"
+                      type="text"
+                      placeholder="Contact" inputmode="numeric" pattern="[0-9]*"
+                      class="input input-bordered input-warning" required
                     />
                   </div>
                 </div>

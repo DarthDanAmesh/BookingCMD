@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-  <link href="carousel.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" hreflang="en" rel="stylesheet" type="text/css" />
+  <link href="carousel.css" rel="stylesheet" hreflang="en" type="text/css"/>
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
@@ -13,13 +13,14 @@
         <div class="xl:max-w-7xl bg-white drop-shadow-xl border border-black/20 w-full rounded-md flex justify-between items-stretch px-5 xl:px-5 py-5">
           <div class="sm:w-[60%] lg:w-[50%] bg-cover bg-center items-center justify-center hidden md:flex ">
          <!--// Add usericon image. credit https://www.tailwindtap.com/blog/tailwind-css-daisyui-form-tutorial-->
+         <!--autocomplete="on" can be applied to applied to the <form>, <input>, <select>, and <textarea> elements-->
             <img
               src="https://media-cdn.tripadvisor.com/media/photo-s/1a/18/51/7d/photo1jpg.jpg"
               alt="login"
               class="h-[500px]"
             />
           </div>
-          <div class="mx-auto w-full lg:w-1/2 md:p-10 py-5 md:py-0">
+          <form class="mx-auto w-full lg:w-1/2 md:p-10 py-5 md:py-0">
             <h1 class="text-center text-2xl sm:text-3xl font-semibold text-[#4A07DA]">
               Create Account
             </h1>
@@ -28,36 +29,47 @@
                 <div class="flex flex-col sm:flex-row gap-3">
                   <input
                     type="text"
-                    placeholder="Enter Your First Name"
-                    class="input input-bordered input-primary w-full max-w-xs text-black placeholder:text-black/70"
+                    placeholder="Enter Your First Name" autocapitalize="words"
+                    class="input input-bordered input-primary w-full max-w-xs text-black placeholder:text-black/70" autocomplete="on" required
                   />
                   <input
                     type="text"
-                    placeholder="Enter Your Last Name"
-                    class="input input-bordered input-primary w-full max-w-xs text-black placeholder:text-black/70"
+                    placeholder="Enter Your Last Name" autocapitalize="words"
+                    class="input input-bordered input-primary w-full max-w-xs text-black placeholder:text-black/70" autocomplete="on" required
                   />
                 </div>
                 <input
-                  type="text"
+                  type="email"
                   placeholder="Enter Your Email" minlength="4"
-                  class="input input-bordered input-primary w-full text-black placeholder:text-black/70"
+                  class="input input-bordered input-primary w-full text-black placeholder:text-black/70" autocomplete="on" required
+                />
+                <!--specifying the input mode: "numeric", changes the keyboard-->
+                <input
+                  type="text" minlength="8" inputmode="numeric" pattern="[0-9]*"
+                  placeholder="Your no.: example 0701234567"
+                  class="input input-bordered input-primary w-full text-black placeholder:text-black/70" autocomplete="on" required
                 />
                 <input
-                  type="tel" minlength="8"
-                  placeholder="Enter Your Phone No"
-                  class="input input-bordered input-primary w-full text-black placeholder:text-black/70"
+                  type="text" minlength="2" inputmode="numeric"
+                  placeholder="Enter Your Age" 
+                  class="input input-bordered input-primary w-full text-black placeholder:text-black/70" autocomplete="off" required
+                />
+                <label for="passport">Passport/ID</label>
+                <input
+                  type="file"  capture="user" accept="image/jpeg,image/png"
+                  class="input input-bordered input-primary w-full text-black placeholder:text-black/70" id="Passport" required
                 />
                 <input
                   type="Password" minlength="4"
-                  placeholder="Enter Your Password"
-                  class="input input-bordered input-primary w-full text-black placeholder:text-black/70"
+                  placeholder="Enter Your Password" autocomplete="new-password"
+                  class="input input-bordered input-primary w-full text-black placeholder:text-black/70" required
                 />
                 <div class="flex items-center gap-1.5  justify-start pl-2">
                   <div class="form-control">
                     <label class="label cursor-pointer">
                       <input
                         type="checkbox"
-                        class="checkbox-xs checkbox-primary"
+                        class="checkbox-xs checkbox-primary" autocomplete="on" required
                       />
                     </label>
                   </div>
@@ -69,16 +81,16 @@
                   </h3>
                 </div>
                 <div class="flex flex-col md:flex-row gap-2 md:gap-4 justify-center items-center">
-                  <button class="btn btn-active btn-primary btn-block max-w-[200px]">
+                  <button type="submit" class="btn btn-active btn-primary btn-block max-w-[200px]">
                     Sign Up
                   </button>
-                  <button class="btn btn-outline btn-primary btn-block max-w-[200px]">
+                  <button type="submit" class="btn btn-outline btn-primary btn-block max-w-[200px]">
                     Sign In
                   </button>
                 </div>
               </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
 </body>
